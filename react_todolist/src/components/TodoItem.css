@@ -12,7 +12,7 @@
 }
 
 /* todo-item 에 마우스가 있을때만 .remove 보이기 */
-.todo-item:hover .remove {
+.todo-item:hover .remove{
     opacity: 1;
 }
 
@@ -20,7 +20,6 @@
 .todo-item + .todo-item {
     border-top: 1px solid #f1f3f5;
 }
-
 
 .remove {
     margin-right: 1rem;

@@ -5,13 +5,12 @@ import TodoItemList from "./components/TodoItemList";
 
 class App extends Component {
     id = 3; // 아래 이미 0, 1, 2 존재하므로 3으로 설정
-
     state = {
         input: '',
         todos: [
             {id: 0, text: '오전 11시', checked: false},
-            {id: 0, text: 'to do list', checked: true},
-            {id: 0, text: 'make something', checked: false}
+            {id: 1, text: 'to do list', checked: true},
+            {id: 2, text: 'make something', checked: false}
         ]
     }
     handleChange = (e) => {
@@ -38,6 +37,7 @@ class App extends Component {
             this.handleCreate();
         }
     }
+
     // 체크 동작
     handleToggle = (id) => {
         const {todos} = this.state;
@@ -70,7 +70,7 @@ class App extends Component {
             handleCreate,
             handleKeyPress,
             handleToggle,
-            handleRemove
+            handleRemove,
         } = this;
 
         return (
@@ -83,7 +83,8 @@ class App extends Component {
                 <TodoItemList
                     todos={todos}
                     onToggle={handleToggle}
-                    onRemove={handleRemove}/>
+                    onRemove={handleRemove}
+                    />
             </TodoListTemplate>
         )
     }
