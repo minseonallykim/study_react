@@ -2,21 +2,14 @@
 import React from "react";
 import './TodoListTemplate.css'
 
-// 파라미터로 받는 props : form, children
-const TodoListTemplate = ({form, children}) => {
+function TodoListTemplate({form, children}){
     return (
         <main className="todo-list-template">
-            <div className="title">
-                TO DO LIST
-            </div>
-            <section className="form-wrapper">
-                {form}
-            </section>
-            <section className="todos-wrapper">
-                {children}
-            </section>
+            <div className="title">TO DO LIST</div>
+            <section className="form-wrapper">{form}</section>
+            <section className="todos-wrapper">{children}</section>
         </main>
     )
-};
+}
 
 export default TodoListTemplate;

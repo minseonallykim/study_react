@@ -2,16 +2,14 @@
 import React from "react";
 import './Form.css'
 
-// 파라미터로 받는 props : value(input내용), onCreate(버튼 클릭시), onChange(input내용 변경시), onKeyPress(input에서 key입력)
-const Form = ({value, onChange, onCreate, onKeyPress}) => {
+// value(input내용), onCreate(버튼 클릭시), onChange(input내용 변경시), onKeyPress(input에서 key입력)
+function Form({value, onChange, onCreate, onKeyPress}){
     return (
         <div className="form">
             <input value={value} onChange={onChange} onKeyPress={onKeyPress}/>
-            <div className="create-button" onClick={onCreate}>
-                ADD
-            </div>
+            <div className="create-button" onClick={onCreate}>ADD</div>
         </div>
     )
-};
+}
 
 export default Form;
